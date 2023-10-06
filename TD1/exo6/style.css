@@ -1,0 +1,12 @@
+table{
+    margin-top: 5vh;
+    width: 40vw;
+    height: 80vh;
+}
+tr{
+    background-color: rgb(34, 34, 34)
+}
+td{
+    background-color: rgb(107, 107, 107);
+    text-align: center;
+}

@@ -9,16 +9,12 @@
 <body>
     <header>
         <a href="avascript:history.back()">retour</a>
-        <h1>Bienvenue sur les exercices de php</h1>
+        <h1>Bienvenue sur les exercices du TD2</h1>
         <a href="">actualiser</a>
     </header>
     <div id="conteneurbtn">
-        <a href="http://localhost/php/coursPHP/exo2/index.php">Exercice 2</a>
-        <a href="http://localhost/php/coursPHP/exo3/index.php">Exercice 3</a>
-        <a href="http://localhost/php/coursPHP/exo4/index.php">Exercice 4</a>
-        <a href="http://localhost/php/coursPHP/exo5/index.php">Exercice 5</a>
-        <a href="http://localhost/php/coursPHP/exo6/index.php">Exercice 6</a>
-        <a href="http://localhost/php/coursPHP/exo7/index.php">Exercice 7</a>
+        <a href="http://localhost/php/coursPHP/TD1/TD1.php">TD 1</a>
+        <a href="http://localhost/php/coursPHP/TD2/TD2.php">TD 2</a>
     </div>
 </body>
 </html>

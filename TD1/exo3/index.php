@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../packexo/style.css">
+    <link rel="stylesheet" href="../../packexo/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 4</title>
+    <title>exercice 3</title>
 </head>
 <body>
     <header>
         <a href="javascript:history.back()">retour</a>
-        <h1>Bienvenue sur l'exercice 4</h1>
+        <h1>Bienvenue sur l'exercice 3</h1>
         <a href="">actualiser</a>
     </header>
-    <?php
-    // titre 
+    <h1><?php
         $titre = "Exercice 3 :";
         echo($titre)
-    /* gros commentaire*/
-    ?>
+    ?></h1>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../packexo/style.css">
+    <link rel="stylesheet" href="../../packexo/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
@@ -13,7 +13,13 @@
         <a href="">actualiser</a>
     </header>
     <?php
-    
+    $a = 2;
+    $b = 3;
+    echo "valeur de ",$a," + ",$b," = ",$a+$b,"<br>";
+    echo "valeur de ",$a," - ",$b," = ",$a-$b,"<br>";
+    echo "valeur de ",$a," X ",$b," = ",$a*$b,"<br>";
+    echo "valeur de ",$a," / ",$b," = ",$a/$b,"<br>";
+    echo "valeur de ",$a," % ",$b," = ",$a%$b,"<br>";
     ?>
 </body>
 </html>
