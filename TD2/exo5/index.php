@@ -9,11 +9,15 @@
 <body>
     <header>
         <a href="javascript:history.back()">retour</a>
-        <h1>Bienvenue sur les exercices de php</h1>
+        <h1><a href="http://localhost/php/coursPHP/accueil.php">Bienvenue sur les exercices de php</a></h1>
         <a href="">actualiser</a>
     </header>
     <?php
-    
+    $resul = "";
+    for($i = strlen($_GET["chaine"]) - 1; $i >= 0; $i--){
+        $resul .= $_GET["chaine"][$i];
+    }
+    echo $resul;
     ?>
 </body>
 </html>

@@ -9,11 +9,21 @@
 <body>
     <header>
         <a href="javascript:history.back()">retour</a>
-        <h1>Bienvenue sur les exercices de php</h1>
+        <h1><a href="http://localhost/php/coursPHP/accueil.php">Bienvenue sur les exercices de php</a></h1>
         <a href="">actualiser</a>
     </header>
     <?php
-    
+        for($i=0;$i<100;$i++){
+            $sortie = "";
+            if($i%3==0){
+                $sortie.="Fizz";
+            }
+            if($i%5==0){
+                $sortie.="Buzz";
+            }
+            echo $sortie."<br/>";
+        }
+        
     ?>
 </body>
 </html>
