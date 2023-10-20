@@ -15,14 +15,12 @@
     </header>
     <?php
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {            
-            if($_POST["email"]=="root@gmail.com" && $_POST["mot_de_passe"]=="rootpassword"){
-                echo "Nous savons tout de vous votre email : ".$_POST["email"]."</br>";
-                echo "Et même votre mot de passe : ".$_POST["mot_de_passe"];      
-            }
-            else {
-                $erreur = "Échec de la connexion";
-            }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {            
+        echo "Nous savons tout de vous votre email : ".$_POST["email"]."</br>";
+        echo "Et même votre mot de passe : ".$_POST["mot_de_passe"];      
+        }
+        else {
+            $erreur = "Échec de la connexion";
         }
     ?>
     <h1>Connexion</h1>
