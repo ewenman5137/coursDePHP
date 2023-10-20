@@ -14,24 +14,13 @@
         <a href="">actualiser</a>
     </header>
     <?php
-        session_start();
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $conn = new mysqli("localhost", "root", "", "base_de_donnee_bioclipse");
-
-            $_SESSION["email"] = $_POST["email"];
-            $_SESSION["mot_de_passe"] = $_POST["mot_de_passe"];
-            
-            $sql = "SELECT * FROM Compte WHERE adresse_email_compte = '".$_SESSION["email"]."' AND mot_de_passe_compte = '".$_SESSION["mot_de_passe"]."'";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                $_SESSION['email'] = $row['adresse_email_compte'];
-                $_SESSION['mot_de_passe'] = $row['mot_de_passe'];
-                header("Location: /SAE3/accueil.php");        
-                exit();
-            } else {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {            
+            if($_POST["email"]=="root@gmail.com" && $_POST["mot_de_passe"]=="rootpassword"){
+                echo "Nous savons tout de vous votre email : ".$_POST["email"]."</br>";
+                echo "Et même votre mot de passe : ".$_POST["mot_de_passe"];      
+            }
+            else {
                 $erreur = "Échec de la connexion";
             }
         }
