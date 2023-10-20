@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <link rel="stylesheet" href="../../packexo/style.css">
     <meta charset="UTF-8">
@@ -8,36 +8,41 @@
 </head>
 <body>
     <header>
-        <a href="javascript:history.back()">retour</a>
-        <h1>Bienvenue sur les exercices de php</h1>
-        <a href="">actualiser</a>
+        <a href="javascript:history.back()">Retour</a>
+        <h1>Bienvenue sur les exercices de PHP</h1>
+        <a href="">Actualiser</a>
     </header>
+
     <?php
-    $valeur_aleatoire = rand(1, 100);
+    $text_indication="Entrer un chiffre";
     if(isset($_POST["randomValue"])){
-        $valeur_aleatoire=$_POST["randomValue"];
+        $valeur_aleatoire = $_POST["randomValue"];
     }
-    else{
+    else {
         $valeur_aleatoire = rand(1, 100);        
     }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre'])) {
+        $essai = $_POST['nombre'];
+        
+        if ($essai == $valeur_aleatoire) {
+            $text_indication ="Bravo, vous avez trouvé le juste prix !";
+            $valeur_aleatoire = rand(1, 100);
+        } elseif ($essai < $valeur_aleatoire) {
+            $text_indication ="Trop petit !";
+        } else {
+            $text_indication ="Trop grand !";
+        }
+    }
     ?>
-    <h2>Choissir un nombre :</h2>
+
+    <h2>Choisissez un nombre :</h2>
+
     <form action="" method="POST">
-        chiffre : <input type="number" name="nombre">
-        <input type="text" name="randomValue" value="<?php echo $valeur_aleatoire;?>">
+        Chiffre : <input type="number" name="nombre">
+        <input type="hidden" name="randomValue" value="<?php echo $valeur_aleatoire; ?>">
         <input type="submit" value="Essayer">
     </form>
-    <?php
-    var_dump($_POST);
-    echo $valeur_aleatoire;
-    $essai = $_POST['nombre'];
-    if ($essai == $valeur_aleatoire) {
-        echo "Bravo, vous avez trouvé le juste prix !";
-    } elseif ($essai < $valeur_aleatoire) {
-        echo "Trop petit !";
-    } else {
-        echo "Trop grand !";
-    }
-?>
+    <?php echo "<h3 id=\"text_indication\">$text_indication</h3>";?>
+
 </body>
 </html>
