@@ -14,12 +14,14 @@
         <a href="">actualiser</a>
     </header>
     <?php
-        
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start(); // ouvre la session si elle n'est pas déjà ouverte
+        }
         if ($_SERVER["REQUEST_METHOD"] == "POST") {            
             if($_POST["email"]=="root@gmail.com" && $_POST["mot_de_passe"]=="rootpassword"){
                 $_SESSION["email"]=$_POST["email"];
                 $_SESSION["mot_de_passe"]=$_POST["mot_de_passe"];
-                header("/php/coursPHP/TD3/exo2/informaton.php");
+                header("Location: /php/coursPHP/TD3/exo2/information.php");
             }
             else {
                 $erreur = "Échec de la connexion";

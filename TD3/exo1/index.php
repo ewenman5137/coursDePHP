@@ -16,8 +16,10 @@
     <?php
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {            
-        echo "Nous savons tout de vous votre email : ".$_POST["email"]."</br>";
-        echo "Et même votre mot de passe : ".$_POST["mot_de_passe"];      
+        echo "Nous savons tout de vous votre email : ".$_POST["email"]."</br>";  
+        echo "Nous savons tout de vous votre nom : ".$_POST["nom"]."</br>";  
+        echo "Nous savons tout de vous votre sujet : ".$_POST["sujet"]."</br>";  
+        echo "Nous savons tout de vous votre message : ".$_POST["message"]."</br>";    
         }
         else {
             $erreur = "Échec de la connexion";
@@ -27,7 +29,9 @@
     <?php if (isset($erreur)) echo "<p>$erreur</p>"; ?>
     <form action="" method="post">
         <input type="text" name="email" placeholder="Email :">
-        <input type="password" name="mot_de_passe" placeholder="Mot de passe :">
+        <input type="text" name="nom" placeholder="Nom :">
+        <input type="text" name="sujet" placeholder="Sujet :">
+        <input type="text" name="message" placeholder="Message :">
         <div id="bouton_de_connection">
             <button type="submit">Connection</button>
         </div>

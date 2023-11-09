@@ -13,8 +13,11 @@
         <a href="">actualiser</a>
     </header>
     <?php
-    echo "Nous savons tout de vous votre email : ".$_POST["email"]."</br>";
-    echo "Et même votre mot de passe : ".$_POST["mot_de_passe"];
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start(); // ouvre la session si elle n'est pas déjà ouverte
+    }
+    echo "Nous savons tout de vous votre email : ".$_SESSION["email"]."</br>";
+    echo "Et même votre mot de passe : ".$_SESSION["mot_de_passe"];
     ?>
 </body>
 </html>

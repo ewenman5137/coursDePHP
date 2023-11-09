@@ -1,0 +1,13 @@
+form{
+    width: 70vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+input{
+    width: 50%;
+    height: 5vh;
+    border-radius: 5px;
+}

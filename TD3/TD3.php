@@ -15,6 +15,7 @@
     <div id="conteneurbtn">
         <a href="http://localhost/php/coursPHP/TD3/exo1/index.php">Exercice 1</a>
         <a href="http://localhost/php/coursPHP/TD3/exo2/index.php">Exercice 2</a>
+        <a href="http://localhost/php/coursPHP/TD3/exo3/index.php">Exercice 3</a>
     </div>
 </body>
 </html>
